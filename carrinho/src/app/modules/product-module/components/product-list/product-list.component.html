@@ -1,0 +1,17 @@
+
+<h1>Lista de Produtos</h1>
+<div class="container-product-list" *ngIf="products">
+    <div class="row">
+        <div class="col-3" *ngFor="let product of products">
+            <div class="container-img" style="background:url({{product.image}});
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;">
+            </div>
+            <div class="title">{{product.title}}</div>
+            <div class="subtitle">{{product.price}}</div>
+            <div class="content-list">por {{product.brand}}</div>
+            <button type="button" class="btn btn-primary btn-block mt-2 mb-2" (click)="add(product)">Adicionar</button>
+        </div>
+    </div>
+</div>

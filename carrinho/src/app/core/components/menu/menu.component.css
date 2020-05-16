@@ -1,0 +1,28 @@
+.container-car {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-car, .count-car  {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-car {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.4em;
+}
+
+.count-car {
+    background-color: brown;
+    color: #ffffff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}

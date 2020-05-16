@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~@fortawesome/fontawesome-free/css/all.css"; */
+
+
+
+.txt-color-1{
+    color: #ffffff;
+}
+
+.txt-color-2{
+    color: #000000;
+}
+
+.txt-color-3{
+    color: #333333;
+}
+
+.txt-color-4{
+    color: #ccc;
+}
+
+/* CUSTOM BOOTSTRAP */
+.navbar-light .navbar-brand {
+    color: #fff;
+}

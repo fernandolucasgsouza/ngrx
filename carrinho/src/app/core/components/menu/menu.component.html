@@ -1,0 +1,7 @@
+<nav class="navbar navbar-light bg-dark justify-content-between mb-4">
+    <a class="navbar-brand" routerLink="/">fs</a>
+    <div class="container-car">
+        <div class="icon-car txt-color-1"><i class="fas fa-shopping-cart"></i></div>
+        <div class="count-car">{{ (cart$ | async ).products.length }}</div>
+    </div>
+</nav>
