@@ -19,6 +19,17 @@
     color: #ccc;
 }
 
+.txt-color-5{
+    color: #a52a2a;
+}
+
+a.link{
+    text-decoration: none;
+}
+.link.loja:hover{
+    color: #a52a2a;
+}
+
 /* CUSTOM BOOTSTRAP */
 .navbar-light .navbar-brand {
     color: #fff;

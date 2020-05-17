@@ -22,11 +22,15 @@ export function cartReducer(state = cart, action: ActionModel) {
             }
         case ActionTypes.Remove:
             {
-                const index = state.products.indexOf(action.payload)
-                state.products.splice(index, 1)
-                state.total = calculateTotal(state.products)
-                console.log('index', index);
-                console.log('state', state);
+
+                let product_temp = [];
+                if (state.products.length > 0){
+                    const index = state.products.indexOf(action.payload)
+                    console.log('index', index);
+                    product_temp = [...state.products];
+                    product_temp.splice(index, 1)
+                    state = { ...state, products: product_temp, total: calculateTotal(product_temp) };
+                }
                 return state
             }
         case ActionTypes.Clear:

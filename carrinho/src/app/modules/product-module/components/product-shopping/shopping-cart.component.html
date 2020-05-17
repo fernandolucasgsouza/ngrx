@@ -1,0 +1,23 @@
+<h4>Itens no carrinho</h4>
+<div class="container-product-list">
+    <div class="row pt-4 pb-4 boder-bottom" *ngFor="let product of (cart$ | async).products">
+        <ng-container >
+            <div class="col-2 d-flex align-items-center" >
+                <div class="img-cart" style="background:url({{product.image}});
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;">
+                </div>
+            </div>
+            <div class="col-8 mb-10">
+                <div class="title-cart">{{product.title}}</div>
+                <div class="subtitle-cart"><strong>Valor:</strong>{{product.price | currency:'BRL': true}}</div>
+            </div>
+            <div class="col-2 d-flex align-items-center txt-color-5">
+                <div class="delete-item-cart" (click)="remove(product)">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

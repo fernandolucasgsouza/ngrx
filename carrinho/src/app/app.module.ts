@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { cartReducer } from './reducers/cart.reducer';
 import { CoreModule } from './core/core.module';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     CoreModule,
