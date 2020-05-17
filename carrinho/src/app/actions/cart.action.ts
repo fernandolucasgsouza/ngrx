@@ -1,4 +1,3 @@
-import { Action } from "@ngrx/store";
 import { ActionModel } from '../models/action.model';
 import { ProductModel } from '../models/product.model';
 
@@ -8,8 +7,8 @@ export enum ActionTypes {
     Clear = 'CLS'
 }
 
-export const Add = (product: any) => {
-    return <Action>{ type: ActionTypes.Add, payload: product }
+export const Add = (product: ProductModel) => {
+    return <ActionModel>{ type: ActionTypes.Add, payload: product }
 }
 
 export const Remove = (product: ProductModel) => {

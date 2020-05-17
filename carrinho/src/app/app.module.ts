@@ -19,6 +19,8 @@ import { CoreModule } from './core/core.module';
     HttpClientModule,
     StoreModule.forRoot({
       cart: cartReducer
+    }, {
+      runtimeChecks: { strictStateSerializability: false }
     })
   ],
   providers: [],

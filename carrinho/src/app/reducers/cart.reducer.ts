@@ -9,8 +9,14 @@ export function cartReducer(state = cart, action: ActionModel) {
     switch (action.type) {
         case ActionTypes.Add:
             {
-                state.products.push(action.payload)
-                state.total = calculateTotal(state.products)
+                let product_temp = [];
+                if (state.products.length == 0)
+                    state = { ...state, products: [action.payload], total: action.payload.price };
+                else {
+                    product_temp = [...state.products];
+                    product_temp.push(action.payload);
+                    state = { ...state, products: product_temp, total: calculateTotal(product_temp) };
+                }
                 console.log('state', state);
                 return state
             }
