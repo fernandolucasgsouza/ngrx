@@ -1,3 +1,4 @@
+<h4 *ngIf="(cart$ | async).products.length === 0">Seu carrinho está vazio</h4>
 <div class="container-product-list" *ngIf="(cart$ | async).products.length > 0">
     <h4>Produtos no carrinho</h4>
     <ng-container *ngFor="let product of (cart$ | async).products">
@@ -21,12 +22,8 @@
         </div>
     </ng-container>
     <div class="row ">
-        <div class="col-12 mt-2 mb-2">
-            <div><strong>Total:&nbsp;{{(cart$ | async).total | currency:'BRL': true}}</strong></div>
-        </div>
         <div class="col-12">
             <button type="button" class="btn btn-primary btn-block mt-2 mb-2" (click)="reset()">Remover todos produtos&nbsp;<i class="fas fa-shopping-cart"></i></button>
-        </div>
-        
+        </div>  
     </div>
 </div>
